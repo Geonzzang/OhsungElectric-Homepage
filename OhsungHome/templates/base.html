@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Base Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+    />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <!-- 전체 콘텐츠 wrapper 시작 -->
+    <div class="wrapper">
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand" href="#page-top">
+            <img src="{% static 'OhsungHome/logo.svg' %}" alt="Logo" />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+          >
+            Menu
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#services">회사소개</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">제품소개</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">형식인증현황</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">카탈로그</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- MAIN CONTENT -->
+      <main class="content">{% block main_content %}{% endblock %}</main>
+    </div>
+    <!-- wrapper 끝 -->
+
+    <!-- FOOTER (하단 고정 X, 하지만 화면 아래 딱 붙게 배치됨) -->
+    <footer class="footer-nofixed">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col mt-4">
+            <img
+              src="{% static 'OhsungHome/logo.svg' %}"
+              class="logo-footer"
+              alt="Footer Logo"
+            />
+          </div>
+          <div class="col mt-4" style="color: rgb(241, 246, 250)">
+            <p>법인명(상호): 주식회사 오성일렉트릭</p>
+            <p>소방 · 화재감지 · 피난유도 전문 제조기업</p>
+            <p>© 2025 OhsungElectric Co., Ltd. All rights reserved.</p>
+          </div>
+          <div class="col mt-4" style="color: rgb(241, 246, 250)">
+            <p>Tel : 02-2618-1003 | Fax : 02-2619-7759</p>
+            <p>E-Mail : omy918@hanmail.net</p>
+            <p>주소 : 경기도 화성시 향남읍 발안로 499-39</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

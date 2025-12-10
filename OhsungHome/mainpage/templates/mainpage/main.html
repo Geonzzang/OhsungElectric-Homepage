@@ -1,0 +1,255 @@
+{% extends 'base.html' %} {% block main_content %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<!-- Google fonts-->
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<!-- Masthead-->
+<header class="masthead">
+  <div class="container">
+    <div class="masthead-subheading">오성일렉트릭</div>
+    <div class="masthead-heading text-uppercase">방폭 소방 제품 전문 기업</div>
+
+    <p class="main-produce">안전한 제품을 최고의 품질로 보답하겠습니다.</p>
+    <div>
+      <a class="btn btn-primary btn-xl text-uppercase" href="#services"
+        >제품 보러가기기</a
+      >
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container-xl custom-wide">
+    <div class="row">
+      <div class="col-7 mt-5">
+        <h2>
+          <br />
+          <span style="color: rgb(209, 69, 69)">OHSUNG</span>electric
+          <strong><span> 경영이념</span></strong>
+        </h2>
+
+        <hr />
+
+        <p class="sub-produce">
+          <strong>(주)오성일렉트릭</strong>은 방폭 제품과 소방 감지 시스템
+          분야에서 <br />
+          <span style="color: rgb(209, 69, 69); font-weight: 600"
+            >안전과 품질</span
+          >을 최우선 가치로 삼고 있습니다.
+          <br />
+          완성도 높은 제품과 책임 있는 서비스로 고객에게 믿음을 주는 파트너가
+          되겠습니다.
+        </p>
+      </div>
+
+      <div
+        class="col-5 mt-3 d-flex justify-content-between align-items-center safe-wrapper"
+      >
+        <h2></h2>
+        <img src="{% static 'OhsungHome/LSCE152.webp' %}" class="safe-mark" />
+        <img src="{% static 'OhsungHome/kc.jpg' %}" class="safe-mark" />
+        <img src="{% static 'OhsungHome/kfi.jpg' %}" class="safe-mark" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md mt-5">
+    <h1 class="main-point">Product</h1>
+    <hr />
+
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- ============================ -->
+        <!--   1번째 슬라이드 (제품 1~4)   -->
+        <!-- ============================ -->
+        <div class="carousel-item active">
+          <div class="row text-center">
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'OhsungHome/제품1.png' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>방폭 발신기</h5></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'OhsungHome/제품2.png' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>제품 2</h5></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'OhsungHome/제품3.png' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>제품 3</h5></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'OhsungHome/제품4.png' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>제품 4</h5></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================ -->
+        <!--   2번째 슬라이드 (제품 5~8)   -->
+        <!-- ============================ -->
+        <div class="carousel-item">
+          <div class="row text-center">
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'products/p5.jpg' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>제품 5</h5></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'products/p6.jpg' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>제품 6</h5></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'products/p7.jpg' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>제품 7</h5></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'products/p8.jpg' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>제품 8</h5></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================ -->
+        <!--   3번째 슬라이드 (제품 9~12)  -->
+        <!-- ============================ -->
+        <div class="carousel-item">
+          <div class="row text-center">
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'products/p9.jpg' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>제품 9</h5></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'products/p10.jpg' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>제품 10</h5></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'products/p11.jpg' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>제품 11</h5></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  src="{% static 'products/p12.jpg' %}"
+                  class="card-img-top"
+                />
+                <div class="card-body"><h5>제품 12</h5></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 좌우 버튼 -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#productCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#productCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <style>
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 5%; /* 버튼 영역 넓이 */
+        }
+
+        .carousel-control-prev {
+          left: -60px; /* 왼쪽 밖으로 이동 */
+        }
+
+        .carousel-control-next {
+          right: -60px; /* 오른쪽 밖으로 이동 */
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          filter: invert(1) brightness(0);
+        }
+      </style>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
