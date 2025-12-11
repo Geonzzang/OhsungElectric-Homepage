@@ -19,6 +19,7 @@ from OhsungHome import views
 
 urlpatterns = [
     path("", include("mainpage.urls")),
+    path("certi/", include("certificate_page.urls")),
     path("admin/", admin.site.urls),
     
 ]

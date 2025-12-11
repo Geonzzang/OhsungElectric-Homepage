@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles", # <--- static을 사용하기 위해 꼭 있어야함 
-    "mainpage.apps.MainpageConfig"
+    "mainpage.apps.MainpageConfig",
+    "certificate_page.apps.CertificatePageConfig"
 ]
 
 MIDDLEWARE = [
