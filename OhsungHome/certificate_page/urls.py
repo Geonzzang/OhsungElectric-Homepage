@@ -6,5 +6,5 @@ from . import views
 app_name = "certificate_page"
 
 urlpatterns = [
-    path('', views.render_page, name='certi'),
+    path('', views.certi_render, name='certi'),
 ]

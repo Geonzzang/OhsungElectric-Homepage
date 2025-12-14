@@ -1,18 +1,3 @@
-"""OhsungHome URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
 from OhsungHome import views
@@ -20,10 +5,18 @@ from OhsungHome import views
 urlpatterns = [
     path("", include("mainpage.urls")),
     path("certi/", include("certificate_page.urls")),
+    path("product/", include("product_page.urls")),
     path("admin/", admin.site.urls),
     
 ]
+from django.conf.urls.static import static
+from django.conf import settings
+
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 from OhsungHome import views
 # 404 error 가 발생시 해결 Setting에 debug == False로 바꿔줘야됨
 handler404 = "OhsungHome.views.error_404_view"
+

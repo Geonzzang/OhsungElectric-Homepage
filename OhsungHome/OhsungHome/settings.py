@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles", # <--- static을 사용하기 위해 꼭 있어야함 
     "mainpage.apps.MainpageConfig",
-    "certificate_page.apps.CertificatePageConfig"
+    "certificate_page.apps.CertificatePageConfig",
+    "product_page.apps.ProductPageConfig"
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,10 @@ STATICFILES_DIRS = ('static',)
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# DB에 저장된 Media 파일을 로드
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
