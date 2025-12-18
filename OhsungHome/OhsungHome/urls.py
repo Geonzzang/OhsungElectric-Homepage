@@ -6,6 +6,7 @@ urlpatterns = [
     path("", include("mainpage.urls")),
     path("certi/", include("certificate_page.urls")),
     path("product/", include("product_page.urls")),
+    path("catalog/", include("catalog.urls")),
     path("admin/", admin.site.urls),
     
 ]

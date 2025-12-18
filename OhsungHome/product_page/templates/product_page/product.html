@@ -1,7 +1,7 @@
-{% extends 'base.html' %} {% block main_content %} {% load static %}
+{% extends 'index.html' %} {% block main_content %} {% load static %}
 
 <!-- CSS style  -->
-<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 
 <!-- Bootstrap CSS -->
 <link
@@ -37,7 +37,10 @@
     <div class="row g-4">
       {% for product in products %}
       <div class="col-12 col-sm-6 col-lg-4">
-        <a href="{% url 'product_page:product' %}" class="product-link">
+        <a
+          href="{% url 'product_page:product_detail' product.id %}"
+          class="product-link"
+        >
           <div class="product-card p-3 shadow-sm">
             <!-- 제품 이미지 -->
             <img

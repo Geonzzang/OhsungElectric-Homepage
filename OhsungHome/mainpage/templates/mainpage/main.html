@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% block main_content %} {% load static %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+{% extends 'index.html' %} {% block main_content %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 <!-- Google fonts-->
 <link
   href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
@@ -15,32 +15,23 @@
 <!-- Masthead-->
 <header class="masthead">
   <div class="container">
-    <div class="masthead-subheading">오성일렉트릭</div>
-    <div class="masthead-heading text-uppercase">방폭 소방 제품 전문 기업</div>
-
-    <p class="main-produce">안전한 제품을 최고의 품질로 보답하겠습니다.</p>
-    <div>
-      <a
-        class="btn btn-primary btn-xl text-uppercase"
-        href="{% url 'product_page:product' %}"
-        >제품 보러가기기</a
-      >
+    <div class="masthead-subheading">Welcome To Ohsung Electric!</div>
+    <div class="masthead-heading text-center">
+      We are a leading manufacturer of fire safety products.
     </div>
+    <a
+      class="btn btn-primary btn-xl text-uppercase"
+      href="{% url 'product_page:product' %}"
+      >Product More</a
+    >
   </div>
 </header>
-
-<main>
-  <div class="container-xl custom-wide">
-    <div class="row">
-      <div class="col-7 mt-5">
-        <h2>
-          <br />
-          <span style="color: rgb(209, 69, 69)">OHSUNG</span>electric
-          <strong><span> 경영이념</span></strong>
-        </h2>
-
-        <hr />
-
+<!-- Services-->
+<section class="page-section" id="services">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">경영이념</h2>
+      <h3 class="section-subheading text-muted">
         <p class="sub-produce">
           <strong>(주)오성일렉트릭</strong>은 방폭 제품과 소방 감지 시스템
           분야에서 <br />
@@ -51,207 +42,564 @@
           완성도 높은 제품과 책임 있는 서비스로 고객에게 믿음을 주는 파트너가
           되겠습니다.
         </p>
+      </h3>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <span class="fa-stack fa-4x">
+          <img
+            src="{% static 'OhsungHome/LSCE152.webp' %}"
+            ,
+            class="safe-mark"
+          />
+          <!-- <i class="fas fa-circle fa-stack-2x text-primary"></i>
+          <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i> -->
+        </span>
+        <h4 class="my-3">E-Commerce</h4>
+        <p class="text-muted">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+          maxime quam architecto quo inventore harum ex magni, dicta impedit.
+        </p>
       </div>
-
-      <div
-        class="col-5 mt-3 d-flex justify-content-between align-items-center safe-wrapper"
-      >
-        <h2></h2>
-        <img src="{% static 'OhsungHome/LSCE152.webp' %}" class="safe-mark" />
-        <img src="{% static 'OhsungHome/kc.jpg' %}" class="safe-mark" />
-        <img src="{% static 'OhsungHome/kfi.jpg' %}" class="safe-mark" />
+      <div class="col-md-4">
+        <span class="fa-stack fa-4x">
+          <img src="{% static 'OhsungHome/kc.jpg' %}" class="safe-mark" />
+          <!-- <i class="fas fa-circle fa-stack-2x text-primary"></i>
+          <i class="fas fa-laptop fa-stack-1x fa-inverse"></i> -->
+        </span>
+        <h4 class="my-3">Responsive Design</h4>
+        <p class="text-muted">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+          maxime quam architecto quo inventore harum ex magni, dicta impedit.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <span class="fa-stack fa-4x">
+          <img src="{% static 'OhsungHome/kfi.jpg' %}" class="safe-mark" />
+          <!-- <i class="fas fa-circle fa-stack-2x text-primary"></i>
+          <i class="fas fa-lock fa-stack-1x fa-inverse"></i> -->
+        </span>
+        <h4 class="my-3">Web Security</h4>
+        <p class="text-muted">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+          maxime quam architecto quo inventore harum ex magni, dicta impedit.
+        </p>
       </div>
     </div>
   </div>
-
-  <div class="container-md mt-5">
-    <h1 class="main-point">Product</h1>
-    <hr />
-
-    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <!-- ============================ -->
-        <!--   1번째 슬라이드 (제품 1~4)   -->
-        <!-- ============================ -->
-        <div class="carousel-item active">
-          <div class="row text-center">
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'OhsungHome/제품1.png' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>방폭 발신기</h5></div>
+</section>
+<!-- Portfolio Grid-->
+<section class="page-section bg-light" id="portfolio">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Product</h2>
+      <h3 class="section-subheading text-muted">
+        Lorem ipsum dolor sit amet consectetur.
+      </h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <!-- Portfolio item 1-->
+        <div class="portfolio-item">
+          <a
+            class="portfolio-link"
+            data-bs-toggle="modal"
+            href="#portfolioModal1"
+          >
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'OhsungHome/제품2.png' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>제품 2</h5></div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'OhsungHome/제품3.png' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>제품 3</h5></div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'OhsungHome/제품4.png' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>제품 4</h5></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ============================ -->
-        <!--   2번째 슬라이드 (제품 5~8)   -->
-        <!-- ============================ -->
-        <div class="carousel-item">
-          <div class="row text-center">
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'products/p5.jpg' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>제품 5</h5></div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'products/p6.jpg' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>제품 6</h5></div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'products/p7.jpg' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>제품 7</h5></div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'products/p8.jpg' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>제품 8</h5></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ============================ -->
-        <!--   3번째 슬라이드 (제품 9~12)  -->
-        <!-- ============================ -->
-        <div class="carousel-item">
-          <div class="row text-center">
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'products/p9.jpg' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>제품 9</h5></div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'products/p10.jpg' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>제품 10</h5></div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'products/p11.jpg' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>제품 11</h5></div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card">
-                <img
-                  src="{% static 'products/p12.jpg' %}"
-                  class="card-img-top"
-                />
-                <div class="card-body"><h5>제품 12</h5></div>
-              </div>
+            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Threads</div>
+            <div class="portfolio-caption-subheading text-muted">
+              Illustration
             </div>
           </div>
         </div>
       </div>
-
-      <!-- 좌우 버튼 -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#productCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#productCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon"></span>
-      </button>
-
-      <style>
-        .carousel-control-prev,
-        .carousel-control-next {
-          width: 5%; /* 버튼 영역 넓이 */
-        }
-
-        .carousel-control-prev {
-          left: -60px; /* 왼쪽 밖으로 이동 */
-        }
-
-        .carousel-control-next {
-          right: -60px; /* 오른쪽 밖으로 이동 */
-        }
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-          filter: invert(1) brightness(0);
-        }
-      </style>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <!-- Portfolio item 2-->
+        <div class="portfolio-item">
+          <a
+            class="portfolio-link"
+            data-bs-toggle="modal"
+            href="#portfolioModal2"
+          >
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Explore</div>
+            <div class="portfolio-caption-subheading text-muted">
+              Graphic Design
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <!-- Portfolio item 3-->
+        <div class="portfolio-item">
+          <a
+            class="portfolio-link"
+            data-bs-toggle="modal"
+            href="#portfolioModal3"
+          >
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Finish</div>
+            <div class="portfolio-caption-subheading text-muted">Identity</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+        <!-- Portfolio item 4-->
+        <div class="portfolio-item">
+          <a
+            class="portfolio-link"
+            data-bs-toggle="modal"
+            href="#portfolioModal4"
+          >
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Lines</div>
+            <div class="portfolio-caption-subheading text-muted">Branding</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+        <!-- Portfolio item 5-->
+        <div class="portfolio-item">
+          <a
+            class="portfolio-link"
+            data-bs-toggle="modal"
+            href="#portfolioModal5"
+          >
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Southwest</div>
+            <div class="portfolio-caption-subheading text-muted">
+              Website Design
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <!-- Portfolio item 6-->
+        <div class="portfolio-item">
+          <a
+            class="portfolio-link"
+            data-bs-toggle="modal"
+            href="#portfolioModal6"
+          >
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Window</div>
+            <div class="portfolio-caption-subheading text-muted">
+              Photography
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</main>
+</section>
+
+<!-- Portfolio Modals-->
+<!-- Portfolio item 1 modal popup-->
+<div
+  class="portfolio-modal modal fade"
+  id="portfolioModal1"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-bs-dismiss="modal">
+        <img src="assets/img/close-icon.svg" alt="Close modal" />
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="modal-body">
+              <!-- Project details-->
+              <h2 class="text-uppercase">Project Name</h2>
+              <p class="item-intro text-muted">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <img
+                class="img-fluid d-block mx-auto"
+                src="assets/img/portfolio/1.jpg"
+                alt="..."
+              />
+              <p>
+                Use this area to describe your project. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Est blanditiis dolorem culpa
+                incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                officia expedita beatae cupiditate, maiores repudiandae,
+                nostrum, reiciendis facere nemo!
+              </p>
+              <ul class="list-inline">
+                <li>
+                  <strong>Client:</strong>
+                  Threads
+                </li>
+                <li>
+                  <strong>Category:</strong>
+                  Illustration
+                </li>
+              </ul>
+              <button
+                class="btn btn-primary btn-xl text-uppercase"
+                data-bs-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-xmark me-1"></i>
+                Close Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio item 2 modal popup-->
+<div
+  class="portfolio-modal modal fade"
+  id="portfolioModal2"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-bs-dismiss="modal">
+        <img src="assets/img/close-icon.svg" alt="Close modal" />
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="modal-body">
+              <!-- Project details-->
+              <h2 class="text-uppercase">Project Name</h2>
+              <p class="item-intro text-muted">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <img
+                class="img-fluid d-block mx-auto"
+                src="assets/img/portfolio/2.jpg"
+                alt="..."
+              />
+              <p>
+                Use this area to describe your project. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Est blanditiis dolorem culpa
+                incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                officia expedita beatae cupiditate, maiores repudiandae,
+                nostrum, reiciendis facere nemo!
+              </p>
+              <ul class="list-inline">
+                <li>
+                  <strong>Client:</strong>
+                  Explore
+                </li>
+                <li>
+                  <strong>Category:</strong>
+                  Graphic Design
+                </li>
+              </ul>
+              <button
+                class="btn btn-primary btn-xl text-uppercase"
+                data-bs-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-xmark me-1"></i>
+                Close Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio item 3 modal popup-->
+<div
+  class="portfolio-modal modal fade"
+  id="portfolioModal3"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-bs-dismiss="modal">
+        <img src="assets/img/close-icon.svg" alt="Close modal" />
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="modal-body">
+              <!-- Project details-->
+              <h2 class="text-uppercase">Project Name</h2>
+              <p class="item-intro text-muted">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <img
+                class="img-fluid d-block mx-auto"
+                src="assets/img/portfolio/3.jpg"
+                alt="..."
+              />
+              <p>
+                Use this area to describe your project. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Est blanditiis dolorem culpa
+                incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                officia expedita beatae cupiditate, maiores repudiandae,
+                nostrum, reiciendis facere nemo!
+              </p>
+              <ul class="list-inline">
+                <li>
+                  <strong>Client:</strong>
+                  Finish
+                </li>
+                <li>
+                  <strong>Category:</strong>
+                  Identity
+                </li>
+              </ul>
+              <button
+                class="btn btn-primary btn-xl text-uppercase"
+                data-bs-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-xmark me-1"></i>
+                Close Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio item 4 modal popup-->
+<div
+  class="portfolio-modal modal fade"
+  id="portfolioModal4"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-bs-dismiss="modal">
+        <img src="assets/img/close-icon.svg" alt="Close modal" />
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="modal-body">
+              <!-- Project details-->
+              <h2 class="text-uppercase">Project Name</h2>
+              <p class="item-intro text-muted">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <img
+                class="img-fluid d-block mx-auto"
+                src="assets/img/portfolio/4.jpg"
+                alt="..."
+              />
+              <p>
+                Use this area to describe your project. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Est blanditiis dolorem culpa
+                incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                officia expedita beatae cupiditate, maiores repudiandae,
+                nostrum, reiciendis facere nemo!
+              </p>
+              <ul class="list-inline">
+                <li>
+                  <strong>Client:</strong>
+                  Lines
+                </li>
+                <li>
+                  <strong>Category:</strong>
+                  Branding
+                </li>
+              </ul>
+              <button
+                class="btn btn-primary btn-xl text-uppercase"
+                data-bs-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-xmark me-1"></i>
+                Close Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio item 5 modal popup-->
+<div
+  class="portfolio-modal modal fade"
+  id="portfolioModal5"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-bs-dismiss="modal">
+        <img src="assets/img/close-icon.svg" alt="Close modal" />
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="modal-body">
+              <!-- Project details-->
+              <h2 class="text-uppercase">Project Name</h2>
+              <p class="item-intro text-muted">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <img
+                class="img-fluid d-block mx-auto"
+                src="assets/img/portfolio/5.jpg"
+                alt="..."
+              />
+              <p>
+                Use this area to describe your project. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Est blanditiis dolorem culpa
+                incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                officia expedita beatae cupiditate, maiores repudiandae,
+                nostrum, reiciendis facere nemo!
+              </p>
+              <ul class="list-inline">
+                <li>
+                  <strong>Client:</strong>
+                  Southwest
+                </li>
+                <li>
+                  <strong>Category:</strong>
+                  Website Design
+                </li>
+              </ul>
+              <button
+                class="btn btn-primary btn-xl text-uppercase"
+                data-bs-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-xmark me-1"></i>
+                Close Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio item 6 modal popup-->
+<div
+  class="portfolio-modal modal fade"
+  id="portfolioModal6"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-bs-dismiss="modal">
+        <img src="assets/img/close-icon.svg" alt="Close modal" />
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="modal-body">
+              <!-- Project details-->
+              <h2 class="text-uppercase">Project Name</h2>
+              <p class="item-intro text-muted">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <img
+                class="img-fluid d-block mx-auto"
+                src="assets/img/portfolio/6.jpg"
+                alt="..."
+              />
+              <p>
+                Use this area to describe your project. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Est blanditiis dolorem culpa
+                incidunt minus dignissimos deserunt repellat aperiam quasi sunt
+                officia expedita beatae cupiditate, maiores repudiandae,
+                nostrum, reiciendis facere nemo!
+              </p>
+              <ul class="list-inline">
+                <li>
+                  <strong>Client:</strong>
+                  Window
+                </li>
+                <li>
+                  <strong>Category:</strong>
+                  Photography
+                </li>
+              </ul>
+              <button
+                class="btn btn-primary btn-xl text-uppercase"
+                data-bs-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-xmark me-1"></i>
+                Close Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="{% static 'js/scripts.js' %}"></script>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!-- * *                               SB Forms JS                               * *-->
+<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
 {% endblock %}

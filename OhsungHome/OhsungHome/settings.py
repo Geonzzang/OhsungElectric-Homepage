@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles", # <--- static을 사용하기 위해 꼭 있어야함 
     "mainpage.apps.MainpageConfig",
     "certificate_page.apps.CertificatePageConfig",
-    "product_page.apps.ProductPageConfig"
+    "product_page.apps.ProductPageConfig",
+    "catalog.apps.CatalogConfig"
 ]
 
 MIDDLEWARE = [
